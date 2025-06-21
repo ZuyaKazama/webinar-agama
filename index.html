@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="logo.png" alt="Logo Webinar" class="header-logo">
     <title>Webinar Pendidikan Agama 2025</title>
     <style>
         /* CSS yang Telah Ditingkatkan */
@@ -29,27 +28,47 @@
         header {
             background: #2980b9; /* Warna biru untuk header */
             color: #ffffff;
-            padding: 30px 20px;
-            text-align: center;
+            padding: 20px 0; /* Menyesuaikan padding */
             border-bottom: 5px solid #2c3e50;
             animation: slideDown 0.8s ease-out; /* Animasi slide dari atas */
         }
+        
+        /* == PERUBAHAN UNTUK HEADER DENGAN LOGO == */
+        header .container {
+            display: flex;          /* Membuat elemen di dalamnya (logo & teks) berdampingan */
+            align-items: center;    /* Membuat logo dan grup teks sejajar secara vertikal di tengah */
+            gap: 30px;              /* Memberi jarak 30px antara logo dan grup teks */
+        }
+
+        .header-logo {
+            max-height: 80px;       /* Atur tinggi maksimal logo, bisa disesuaikan */
+            width: auto;            /* Lebar akan menyesuaikan secara otomatis */
+        }
+
+        .header-text {
+            text-align: left;       /* Membuat teks di dalam header menjadi rata kiri */
+        }
+        /* == AKHIR PERUBAHAN HEADER == */
 
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 2.2em; /* Sedikit menyesuaikan ukuran font */
         }
 
         header p {
-            font-size: 1.1em;
-            margin: 5px 0 20px;
+            font-size: 1em;
+            margin: 2px 0;
+        }
+
+        nav {
+            margin-top: 15px;
         }
 
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 15px;
+            margin-right: 15px;
             font-weight: bold;
             padding: 8px 15px;
             border-radius: 5px;
@@ -160,6 +179,8 @@
 <body>
 
 <header>
+    <div class="container">
+        <img src="images/logo-webinar.png" alt="Logo Webinar" class="header-logo">
     <div class="container">
         <h1>Webinar Pendidikan Agama 2</h1>
         <p><strong>Tanggal:</strong> Sabtu, 5 Juli 2025</p>
